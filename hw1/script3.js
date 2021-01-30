@@ -13,6 +13,7 @@ let pos, track;
    background(50);
    
    pos = createVector(mouseX,mouseY);
+   pos.x = pos.x + random(10,10);
    fill('orange');
    ellipse(pos.x,pos.y,64,64);  
    
