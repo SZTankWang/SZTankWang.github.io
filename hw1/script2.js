@@ -1,7 +1,8 @@
-let ball,pos,acc,vel,lose;
+let canvas,ball,pos,acc,vel,lose;
   
  function setup() {
-  createCanvas(400,400);
+  canvas = createCanvas(400,400);
+  canvas.mousePressed(resetSpeed);
   background(50);
   pos = createVector(width/2,15);
   acc = createVector(0,0.5);
@@ -37,7 +38,13 @@ let ball,pos,acc,vel,lose;
      }
 };
 
-
+function resetSpeed() {
+  acc.y = 0.5;
+  pos = createVector(width/2,15);
+  
+  
+}
+  
 
   
 
